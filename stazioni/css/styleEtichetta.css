@@ -1,0 +1,114 @@
+#etichetta
+{
+	width:9cm;
+	height:14cm;
+	display:inline-block;
+	border:1px solid #ddd;
+	overflow:hidden;
+}
+#nome
+{
+	text-align:center;
+	width:9cm;
+	height:2cm;
+	font-weight:bold;
+	font-size:1.3cm;
+	line-height:2cm;
+	font-family:sans-serif;
+	border:3px solid black;
+	float:left;
+	display:inline-block;
+	box-sizing:border-box;
+}
+#commessa
+{
+	text-align:center;
+	width:3cm;
+	height:2cm;
+	font-weight:normal;
+	line-height:1cm;
+	font-family:sans-serif;
+	border:2px solid gray;
+	float:left;
+	display:inline-block;
+	box-sizing:border-box;
+}
+#lotto
+{
+	text-align:center;
+	width:3cm;
+	height:2cm;
+	font-weight:normal;
+	line-height:1cm;
+	font-family:sans-serif;
+	border:2px solid gray;
+	float:left;
+	display:inline-block;
+	box-sizing:border-box;
+}
+#numero
+{
+	text-align:center;
+	width:3cm;
+	height:2cm;
+	font-weight:normal;
+	line-height:1cm;
+	font-family:sans-serif;
+	border:2px solid gray;
+	float:left;
+	display:inline-block;
+	box-sizing:border-box;
+}
+#dataOraCreazione
+{
+	text-align:center;
+	width:4.5cm;
+	height:2cm;
+	font-weight:normal;
+	line-height:1cm;
+	font-family:sans-serif;
+	border:2px solid gray;
+	float:left;
+	display:inline-block;
+	box-sizing:border-box;
+}
+#dataOraChiusura
+{
+	text-align:center;
+	width:4.5cm;
+	height:2cm;
+	font-weight:normal;
+	line-height:1cm;
+	font-family:sans-serif;
+	border:2px solid gray;
+	float:left;
+	display:inline-block;
+	box-sizing:border-box;
+}
+#myTable
+{
+	width:4.5cm;
+	height:7.5cm;
+	border:2px solid gray;
+	float:left;
+	display:inline-block;
+	box-sizing:border-box;
+	border-collapse: collapse;
+}
+#myTable th
+{
+	width:2.25cm;
+	height:1cm;
+	font-weight:bold;
+	font-family:sans-serif;
+	border:2px solid gray;
+	text-align:center;
+}
+#myTable td
+{
+	text-align:center;
+	width:2.2cm;
+	font-weight:normal;
+	font-family:sans-serif;
+	border:2px solid gray;
+}

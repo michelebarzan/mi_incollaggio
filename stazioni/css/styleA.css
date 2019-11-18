@@ -1,0 +1,164 @@
+body 
+{
+	background: linear-gradient(#C4C4C4,#4c94cb);
+	height:100%;
+}
+html
+{
+	height: 100%;
+}
+h1, body
+{
+   margin: 0;
+}
+#immagine
+{
+	height:220px;
+	width:100%;
+	display:block;
+	background-image: url("../images/logo.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	text-align: center;
+}
+#accedi
+{
+	background:#E6E6E6;
+	/*border: 3px solid #C4C4C4;*/
+	width:30%;
+	/*height:350px;*/
+	left:35%;
+	position: absolute;
+	text-align:center;
+	font-size:200%;
+	color:#C4C4C4;
+	font-family: 'Exo', sans-serif;
+	box-shadow: 20px 20px 35px #9c9e9f;
+	height:70%;
+	min-height:40%;
+}
+#text
+{
+	color:#666f77;
+	padding-top:4%;
+	padding-bottom:4%;
+	display:block;
+}
+#input
+{
+	display:block;
+}
+#errore
+{
+	font-size:70%;
+	color:red;
+	margin-top:2%;
+}
+.accedi input[type=text]
+{
+	display:inline-block;
+	width: 0%;
+	height:0%;
+	outline:none;
+	overflow:hidden;
+	border: 1px solid #E6E6E6;
+	box-sizing: border-box; 
+	color:#E6E6E6;
+}
+#result
+{
+	margin-top:3%;
+	margin-bottom:-4%;
+	width:100%;
+	/*position: absolute;*/
+	text-align:center;
+	font-family: 'Exo', sans-serif;
+	font-size:15px;
+	color:red;
+	font-weight:bold;
+}
+#ricordaPassword
+{
+	margin-top:6%;
+	width:100%;
+	/*position: absolute;*/
+	text-align:center;
+	font-family: 'Exo', sans-serif;
+	font-size:15px;
+	color:#666f77;
+	font-weight:bold;
+}
+#nuovaPassword
+{
+	margin-top:2%;
+	width:100%;
+	/*position: absolute;*/
+	text-align:center;
+	font-family: 'Exo', sans-serif;
+	font-size:15px;
+	color:#666f77;
+	font-weight:bold;
+}
+
+#myTable 
+{
+	margin-left:5%;
+	border-collapse: collapse;
+	width:90%;
+	border: 1px solid #ddd;
+}
+#myTable th
+{
+	padding-top:10px;
+	padding-bottom:10px;
+}
+#myTable td 
+{
+	cursor:pointer;
+	color:#666f77;
+	text-align: center;
+	border: 1px solid #ddd;
+	padding: 10px;
+	font-size:70%;
+}
+#myTable tr 
+{
+	border-bottom: 1px solid #ddd;
+	border: 1px solid #ddd;
+}
+#myTable tr:hover 
+{
+	background-color: #f1f1f1;
+}
+#myTable tr.Theader
+{
+	color:#666f77;
+	font-family:arial;
+	font-size:60%;
+	font-weight:bold;
+	text-align: center;
+	background-color:#D1D1D1;
+	border-bottom: 1px solid gray;
+}
+#startLogin
+{
+	text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+	color:#FF2200;
+	font-family:Monospace;
+	font-weight:bold;
+	font-size:900%;
+	text-align:center;
+	position: absolute;
+	text-align:center;
+	display:none;
+	width:1920px;
+	height:1080px;
+	line-height:1080px;
+	float:center;
+	top: 0px;
+	left:0px;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+

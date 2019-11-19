@@ -9,7 +9,7 @@
 	<head>
 		<title><?php echo $pageName; ?></title>
 			<meta name="viewport" content="width=device-width, initial-scale=1">
-			<link rel="stylesheet" href="/mi_incollaggio/ufficio/css/styleV3.css" />
+			<link rel="stylesheet" href="/mi_incollaggio/ufficio/css/styleV4.css" />
 			<script src="struttura.js"></script>
 			<script>
 			function selezionaLana(id_lana,Larg,halt,pos1,pos2,pos3,pos4,pos5,Nome,Codmat)

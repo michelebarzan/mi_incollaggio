@@ -2,6 +2,8 @@
 	set_include_path('C:\xampp\htdocs\mi_incollaggio\ufficio');
 	include "connessione.php";
 	include "Session.php";
+
+	set_time_limit(240);
 			
 	$query="SELECT * FROM bancali";
 	

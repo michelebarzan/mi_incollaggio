@@ -8,7 +8,7 @@
 <html>
 	<head>
 		<title><?php echo $pageName; ?></title>
-			<link rel="stylesheet" href="/mi_incollaggio/ufficio/css/styleV3.css" />
+			<link rel="stylesheet" href="/mi_incollaggio/ufficio/css/styleV4.css" />
 			<script src="struttura.js"></script>
 			<script>
 				function modifica(riga)

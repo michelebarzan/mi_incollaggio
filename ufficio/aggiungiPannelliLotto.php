@@ -4,9 +4,32 @@
 	include "connessione.php";
 	include "Session.php";
 
+	$lotto=$_REQUEST["lotto"];
+
 	echo '<table id="myTableManagement">';
 		echo '<tr>';
-			echo '<th>Lotto</th>';
+			echo '<th>Lotto<select id="aggiungiPannelliLottoFiltroLotto" onchange="aggiungiPannelliLotto(this.value)">';
+				if($lotto=="%")
+					echo "<option value='%'>Tutti</option>";
+				else
+				{
+					echo "<option value='".$lotto."'>".$lotto."</option>";
+					echo "<option value='%'>Tutti</option>";
+				}
+				$queryFiltroLotto="SELECT distinct lotti.lotto FROM lotti WHERE lotto<>'$lotto' ORDER BY lotto";
+				$resultFiltroLotto=sqlsrv_query($conn,$queryFiltroLotto);
+				if($resultFiltroLotto==FALSE)
+				{
+					die("error");
+				}
+				else
+				{
+					while($rowFiltroLotto=sqlsrv_fetch_array($resultFiltroLotto))
+					{
+						echo "<option value='".$rowFiltroLotto['lotto']."'>".$rowFiltroLotto['lotto']."</option>";
+					}
+				}
+			echo '</select></th>';
 			echo '<th>Commessa</th>';
 			echo '<th>Completato</th>';
 			echo '<th>Codpan</th>';
@@ -15,7 +38,7 @@
 			echo '<th>Azione<input type="button" id="btnChiudiTabelleManagement" value="X" onclick="chiudiTabelleManagement()" /></th>';
 		echo '</tr>';
 
-		$queryRighe="SELECT lotti.* FROM lotti ORDER BY dataImportazione";
+		$queryRighe="SELECT lotti.* FROM lotti WHERE lotto like '$lotto' ORDER BY dataImportazione";
 		$resultRighe=sqlsrv_query($conn,$queryRighe);
 		if($resultRighe==FALSE)
 		{

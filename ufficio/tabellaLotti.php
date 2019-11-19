@@ -4,9 +4,32 @@
 	include "connessione.php";
 	include "Session.php";
 
+	$lotto=$_REQUEST["lotto"];
+	
 	echo '<table id="myTable">';
 		echo '<tr class="Theader">';
-			echo '<th>Lotto</th>';
+			echo '<th>Lotto<select id="filtroLottoElencoLotti" onchange="tabellaLotti(this.value)">';
+				if($lotto=="%")
+					echo "<option value='%'>Tutti</option>";
+				else
+				{
+					echo "<option value='".$lotto."'>".$lotto."</option>";
+					echo "<option value='%'>Tutti</option>";
+				}
+				$queryFiltroLotto="SELECT distinct lotti.lotto FROM lotti WHERE lotto<>'$lotto' ORDER BY lotto";
+				$resultFiltroLotto=sqlsrv_query($conn,$queryFiltroLotto);
+				if($resultFiltroLotto==FALSE)
+				{
+					die("error");
+				}
+				else
+				{
+					while($rowFiltroLotto=sqlsrv_fetch_array($resultFiltroLotto))
+					{
+						echo "<option value='".$rowFiltroLotto['lotto']."'>".$rowFiltroLotto['lotto']."</option>";
+					}
+				}
+			echo '</select></th>';
 			echo '<th>Commessa</th>';
 			echo '<th>Data importazione</th>';
 			echo '<th>Chiuso</th>';
@@ -14,7 +37,7 @@
 			echo '<th>Producibile</th>';
 		echo '</tr>';
 
-		$queryRighe="SELECT lotti.* FROM lotti ORDER BY dataImportazione";
+		$queryRighe="SELECT lotti.* FROM lotti WHERE lotto LIKE '$lotto' ORDER BY dataImportazione";
 		$resultRighe=sqlsrv_query($conn,$queryRighe);
 		if($resultRighe==FALSE)
 		{
